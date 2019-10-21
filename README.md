@@ -1,6 +1,6 @@
 **Instalação do projeto**
 
-1. Criar e configurar o arquivo .env com os dados do banco.
+1. Criar e configurar um novo arquivo .env a partir do .env.example com os dados do banco.
 
 2. Executar: composer install
 
