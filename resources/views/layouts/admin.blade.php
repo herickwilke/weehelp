@@ -24,7 +24,7 @@
     @yield('styles')
 </head>
 
-<body class="sidebar-mini skin-purple" style="height: auto; min-height: 100%;">
+<body class="sidebar-mini skin-blue" style="height: auto; min-height: 100%;">
     <div class="wrapper" style="height: auto; min-height: 100%;">
         <header class="main-header">
             <a href="#" class="logo">
