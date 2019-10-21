@@ -11,7 +11,9 @@
 
 5. Executar: php artisan storage:link 
 
-E está pronto. Agora só rodar php artisan serve e fazer login:
+6. Agora só rodar: php artisan serve 
+<br>
+Fazer login:
 
 Username:	admin@admin.com <br>
 Password:	password 
