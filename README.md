@@ -41,4 +41,6 @@ Password:	password
 
 8. Melhorias visuais -> user friendly com manuais na view
 
-9. Configurar seed
+9. Configurar novos seed
+
+10. Criar um item "novo chamado" no menu lateral para facilitar
