@@ -14,7 +14,7 @@ return [
     'emailVerificationSuccess'             => 'E-mail verificado com sucesso.',
     'entries'                              => 'Entradas',
     'filterDate'                           => 'Filtrar por data',
-    'forgot_password'                      => 'Esqueceu-se da senha?',
+    'forgot_password'                      => 'Esqueceu a senha?',
     'home'                                 => 'Início',
     'list'                                 => 'Listar',
     'login'                                => 'Entrar',

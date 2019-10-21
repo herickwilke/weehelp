@@ -99,7 +99,7 @@ return [
     ],
     'setor'             => [
         'title'          => 'Setores',
-        'title_singular' => 'Setore',
+        'title_singular' => 'Setor',
         'fields'         => [
             'id'                 => 'ID',
             'id_helper'          => '',
@@ -162,8 +162,8 @@ return [
         ],
     ],
     'timeEntry'         => [
-        'title'          => 'Entradas de tempo',
-        'title_singular' => 'Entrada de tempo',
+        'title'          => 'Tarefas',
+        'title_singular' => 'Tarefa',
         'fields'         => [
             'id'                => 'ID',
             'id_helper'         => '',
