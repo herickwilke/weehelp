@@ -29,18 +29,20 @@ Password:	password
 
 3. Corrigir bug de exibir as divs ao invés do conteúdo na listagem de "descrição"
 
-3. Implementar novos widgets do dashboard no controller
+4. Implementar novos widgets do dashboard no controller
 
-4. Implementar notifications
+5. Implementar notifications
 
-5. Finalizar o esqueceu-se da senha no login
+6. Finalizar o esqueceu-se da senha no login
 
-6. Validação de caracteres especiais nos forms
+7. Validação de caracteres especiais nos forms
 
-7. Implementar notificação de Sucesso, Falha, etc
+8. Implementar notificação de Sucesso, Falha, etc
 
-8. Melhorias visuais -> user friendly com manuais na view
+9. Melhorias visuais -> user friendly com manuais na view
 
-9. Configurar novos seed
+10. Configurar novos seed
 
-10. Criar um item "novo chamado" no menu lateral para facilitar
+11. Criar um item "novo chamado" no menu lateral para facilitar
+
+12. Adicionar comentários nos chamados
