@@ -90,7 +90,7 @@
                 </div>
                 <div class="{{ $settings7['column_class'] }}">
                     <div class="info-box">
-                        <span class="info-box-icon bg-white" style="display:flex; flex-direction: column; justify-content: center;">
+                        <span class="info-box-icon bg-aqua" style="display:flex; flex-direction: column; justify-content: center;">
                             <i class="fa fa-snowflake-o"></i>
                         </span>
 
