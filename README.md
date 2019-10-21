@@ -40,3 +40,5 @@ Password:	password
 7. Implementar notificação de Sucesso, Falha, etc
 
 8. Melhorias visuais -> user friendly com manuais na view
+
+9. Configurar seed
