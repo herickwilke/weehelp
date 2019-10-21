@@ -11,9 +11,9 @@
                 </div>
                 <div class="panel-body">
 
-                    <p>
-                        Text coming soon...
-                    </p>
+                <h3>
+                    Em breve...
+                </h3>
 
 
                 </div>
