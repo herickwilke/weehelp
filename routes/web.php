@@ -6,15 +6,15 @@ Auth::routes(['register' => false]);
 
 Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'middleware' => ['auth']], function () {
     Route::get('/', 'HomeController@index')->name('home');
-    // Permissions
+    // Permissões
     Route::delete('permissions/destroy', 'PermissionsController@massDestroy')->name('permissions.massDestroy');
     Route::resource('permissions', 'PermissionsController');
 
-    // Roles
+    // Funções
     Route::delete('roles/destroy', 'RolesController@massDestroy')->name('roles.massDestroy');
     Route::resource('roles', 'RolesController');
 
-    // Users
+    // Usuários
     Route::delete('users/destroy', 'UsersController@massDestroy')->name('users.massDestroy');
     Route::resource('users', 'UsersController');
 
@@ -23,26 +23,26 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::post('chamados/media', 'ChamadoController@storeMedia')->name('chamados.storeMedia');
     Route::resource('chamados', 'ChamadoController');
 
-    // Setors
+    // Setores
     Route::delete('setors/destroy', 'SetorController@massDestroy')->name('setors.massDestroy');
     Route::resource('setors', 'SetorController');
 
     // Finalizados
     Route::resource('finalizados', 'FinalizadosController', ['except' => ['create', 'store', 'edit', 'update', 'show', 'destroy']]);
 
-    // Time Work Types
+    // Tarefas (tipos de tarefas)
     Route::delete('time-work-types/destroy', 'TimeWorkTypeController@massDestroy')->name('time-work-types.massDestroy');
     Route::resource('time-work-types', 'TimeWorkTypeController');
 
-    // Time Projects
+    // Projetos
     Route::delete('time-projects/destroy', 'TimeProjectController@massDestroy')->name('time-projects.massDestroy');
     Route::resource('time-projects', 'TimeProjectController');
 
-    // Time Entries
+    // Entradas de tempo
     Route::delete('time-entries/destroy', 'TimeEntryController@massDestroy')->name('time-entries.massDestroy');
     Route::resource('time-entries', 'TimeEntryController');
 
-    // Time Reports
+    // Relatórios
     Route::delete('time-reports/destroy', 'TimeReportController@massDestroy')->name('time-reports.massDestroy');
     Route::resource('time-reports', 'TimeReportController');
 
@@ -54,5 +54,6 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::delete('prioridade-chamados/destroy', 'PrioridadeChamadoController@massDestroy')->name('prioridade-chamados.massDestroy');
     Route::resource('prioridade-chamados', 'PrioridadeChamadoController');
 
+    //Calendário
     Route::get('system-calendar', 'SystemCalendarController@index')->name('systemCalendar');
 });

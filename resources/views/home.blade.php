@@ -7,7 +7,7 @@
                 <div class="{{ $settings1['column_class'] }}">
                     <div class="info-box">
                         <span class="info-box-icon bg-red" style="display:flex; flex-direction: column; justify-content: center;">
-                            <i class="fa fa-chart-line"></i>
+                            <i class="fa fa-exclamation-circle"></i>
                         </span>
 
                         <div class="info-box-content">
@@ -49,7 +49,7 @@
                 <div class="{{ $settings4['column_class'] }}">
                     <div class="info-box">
                         <span class="info-box-icon bg-red" style="display:flex; flex-direction: column; justify-content: center;">
-                            <i class="fa fa-chart-line"></i>
+                            <i class="fa fa-suitcase"></i>
                         </span>
 
                         <div class="info-box-content">
@@ -62,8 +62,8 @@
                 </div>
                 <div class="{{ $settings5['column_class'] }}">
                     <div class="info-box">
-                        <span class="info-box-icon bg-red" style="display:flex; flex-direction: column; justify-content: center;">
-                            <i class="fa fa-chart-line"></i>
+                        <span class="info-box-icon bg-yellow" style="display:flex; flex-direction: column; justify-content: center;">
+                            <i class="fa  fa-question-circle-o"></i>
                         </span>
 
                         <div class="info-box-content">
@@ -76,8 +76,8 @@
                 </div>
                 <div class="{{ $settings6['column_class'] }}">
                     <div class="info-box">
-                        <span class="info-box-icon bg-red" style="display:flex; flex-direction: column; justify-content: center;">
-                            <i class="fa fa-chart-line"></i>
+                        <span class="info-box-icon bg-blue" style="display:flex; flex-direction: column; justify-content: center;">
+                            <i class="fa  fa-arrow-circle-up"></i>
                         </span>
 
                         <div class="info-box-content">
@@ -90,8 +90,8 @@
                 </div>
                 <div class="{{ $settings7['column_class'] }}">
                     <div class="info-box">
-                        <span class="info-box-icon bg-red" style="display:flex; flex-direction: column; justify-content: center;">
-                            <i class="fa fa-chart-line"></i>
+                        <span class="info-box-icon bg-white" style="display:flex; flex-direction: column; justify-content: center;">
+                            <i class="fa fa-snowflake-o"></i>
                         </span>
 
                         <div class="info-box-content">
@@ -104,8 +104,8 @@
                 </div>
                 <div class="{{ $settings8['column_class'] }}">
                     <div class="info-box">
-                        <span class="info-box-icon bg-red" style="display:flex; flex-direction: column; justify-content: center;">
-                            <i class="fa fa-chart-line"></i>
+                        <span class="info-box-icon bg-green" style="display:flex; flex-direction: column; justify-content: center;">
+                            <i class="fa  fa-check-circle-o"></i>
                         </span>
 
                         <div class="info-box-content">
@@ -161,21 +161,6 @@
                             @endforelse
                         </tbody>
                     </table>
-                </div>
-
-                <div class="{{ $settings14['column_class'] }}">
-                    <div class="info-box">
-                        <span class="info-box-icon bg-red" style="display:flex; flex-direction: column; justify-content: center;">
-                            <i class="fa fa-chart-line"></i>
-                        </span>
-
-                        <div class="info-box-content">
-                            <span class="info-box-text">{{ $settings14['chart_title'] }}</span>
-                            <span class="info-box-number">{{ number_format($settings14['total_number']) }}</span>
-                        </div>
-                        <!-- /.info-box-content -->
-                    </div>
-                    <!-- /.info-box -->
                 </div>
             </div>
         </div>

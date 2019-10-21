@@ -68,6 +68,21 @@ class HomeController
             'entries_number'        => '5',
         ];
 
+        $settings2 = [
+            'chart_title'           => 'Abertos no mês',
+            'chart_type'            => 'number_block',
+            'report_type'           => 'group_by_date',
+            'model'                 => 'App\\Chamado',
+            'group_by_field'        => 'prazo',
+            'group_by_period'       => 'day',
+            'aggregate_function'    => 'count',
+            'filter_field'          => 'created_at',
+            'filter_period'         => 'month',
+            'group_by_field_format' => 'd-m-Y H:i:s',
+            'column_class'          => 'col-md-3',
+            'entries_number'        => '5',
+        ];
+
         $settings2['total_number'] = 0;
 
         if (class_exists($settings2['model'])) {
@@ -469,53 +484,8 @@ class HomeController
         if (!array_key_exists('fields', $settings13)) {
             $settings13['fields'] = [];
         }
+        
 
-        $settings14 = [
-            'chart_title'           => 'Abertos no mês',
-            'chart_type'            => 'number_block',
-            'report_type'           => 'group_by_date',
-            'model'                 => 'App\\Chamado',
-            'group_by_field'        => 'prazo',
-            'group_by_period'       => 'day',
-            'aggregate_function'    => 'count',
-            'filter_field'          => 'created_at',
-            'filter_period'         => 'month',
-            'group_by_field_format' => 'd-m-Y H:i:s',
-            'column_class'          => 'col-md-3',
-            'entries_number'        => '5',
-        ];
-
-        $settings14['total_number'] = 0;
-
-        if (class_exists($settings14['model'])) {
-            $settings14['total_number'] = $settings14['model']::when(isset($settings14['filter_field']), function ($query) use ($settings14) {
-                if (isset($settings14['filter_days'])) {
-                    return $query->where(
-                        $settings14['filter_field'],
-                        '>=',
-                        now()->subDays($settings14['filter_days'])->format('Y-m-d')
-                    );
-                } else if (isset($settings14['filter_period'])) {
-                    switch ($settings14['filter_period']) {
-                        case 'week':
-                            $start  = date('Y-m-d', strtotime('last Monday'));
-                            break;
-                        case 'month':
-                            $start = date('Y-m') . '-01';
-                            break;
-                        case 'year':
-                            $start  = date('Y') . '-01-01';
-                            break;
-                    }
-
-                    if (isset($start)) {
-                        return $query->where($settings14['filter_field'], '>=', $start);
-                    }
-                }
-            })
-                ->{$settings14['aggregate_function'] ?? 'count'}($settings14['aggregate_field'] ?? '*');
-        }
-
-        return view('home', compact('settings1', 'settings2', 'settings3', 'settings4', 'settings5', 'settings6', 'settings7', 'settings8', 'chart9', 'chart10', 'chart11', 'chart12', 'settings13', 'settings14'));
+        return view('home', compact('settings1', 'settings2', 'settings3', 'settings4', 'settings5', 'settings6', 'settings7', 'settings8', 'chart9', 'chart10', 'chart11', 'chart12', 'settings13'));
     }
 }
