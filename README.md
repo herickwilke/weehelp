@@ -12,6 +12,7 @@
 5. Executar: php artisan storage:link 
 
 6. Agora só rodar: php artisan serve 
+
 <br>
 Fazer login:
 
