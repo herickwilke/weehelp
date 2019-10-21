@@ -6,7 +6,7 @@
             <div class="row">
                 <div class="{{ $settings1['column_class'] }}">
                     <div class="info-box">
-                        <span class="info-box-icon bg-red" style="display:flex; flex-direction: column; justify-content: center;">
+                        <span class="info-box-icon bg-yellow" style="display:flex; flex-direction: column; justify-content: center;">
                             <i class="fa fa-exclamation-circle"></i>
                         </span>
 
@@ -20,7 +20,7 @@
                 </div>
                 <div class="{{ $settings2['column_class'] }}">
                     <div class="info-box">
-                        <span class="info-box-icon bg-red" style="display:flex; flex-direction: column; justify-content: center;">
+                        <span class="info-box-icon bg-purple" style="display:flex; flex-direction: column; justify-content: center;">
                             <i class="fa fa-chart-line"></i>
                         </span>
 
@@ -34,7 +34,7 @@
                 </div>
                 <div class="{{ $settings3['column_class'] }}">
                     <div class="info-box">
-                        <span class="info-box-icon bg-red" style="display:flex; flex-direction: column; justify-content: center;">
+                        <span class="info-box-icon bg-purple" style="display:flex; flex-direction: column; justify-content: center;">
                             <i class="fa fa-chart-line"></i>
                         </span>
 
@@ -48,7 +48,7 @@
                 </div>
                 <div class="{{ $settings4['column_class'] }}">
                     <div class="info-box">
-                        <span class="info-box-icon bg-red" style="display:flex; flex-direction: column; justify-content: center;">
+                        <span class="info-box-icon bg-purple" style="display:flex; flex-direction: column; justify-content: center;">
                             <i class="fa fa-suitcase"></i>
                         </span>
 
