@@ -46,3 +46,5 @@ Password:	password
 11. Criar um item "novo chamado" no menu lateral para facilitar
 
 12. Adicionar comentários nos chamados
+
+13. Implementar a API.
