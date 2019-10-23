@@ -50,3 +50,5 @@ Password:	password
 13. Implementar a API.
 
 14. Trocar a cor dos botões, ex, salvar em verde.
+
+15. Revisar permissões, funções, controle de usuário.
