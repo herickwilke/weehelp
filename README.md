@@ -51,4 +51,4 @@ Password:	password
 
 14. Trocar a cor dos botões, ex, salvar em verde.
 
-15. Revisar permissões, funções, controle de usuário.
+15. Consertar permissões, funções, controle de usuário.
