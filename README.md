@@ -25,7 +25,7 @@ Password:	password
 
 1. Aba listar chamados finalizados
 
-2. Traduzir algumas coisas do template e comentar código
+2. Comentar código
 
 3. Corrigir bug de exibir as divs ao invés do conteúdo na listagem de "descrição"
 
@@ -49,6 +49,4 @@ Password:	password
 
 13. Implementar a API.
 
-14. Trocar a cor dos botões, ex, salvar em verde.
-
-15. Consertar permissões, funções, controle de usuário.
+14. Consertar permissões, funções, controle de usuário.
