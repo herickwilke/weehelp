@@ -13,6 +13,10 @@ class DatabaseSeeder extends Seeder
             UsersTableSeeder::class,
             RoleUserTableSeeder::class,
             PrioridadeSeeder::class,
+            StatusSeeder::class,
+            TipoTarefaSeeder::class,
+            SetorSeeder::class,
+            ProjetoSeeder::class,
         ]);
     }
 }
