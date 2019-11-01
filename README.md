@@ -21,7 +21,13 @@ Password:	password
 
 <br>
 
+
 **Pendências**
+
+***Principais***
+- Notifications
+- API
+- Comentários
 
 1. Aba listar chamados finalizados
 

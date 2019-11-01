@@ -385,6 +385,7 @@ class HomeController
                 ->{$settings8['aggregate_function'] ?? 'count'}($settings8['aggregate_field'] ?? '*');
         }
 
+
         $settings9 = [
             'chart_title'           => 'Volume de chamados (30 dias)',
             'chart_type'            => 'line',
@@ -450,6 +451,8 @@ class HomeController
         ];
 
         $chart12 = new LaravelChart($settings12);
+
+        $prioridades = \App\PrioridadeChamado::all();
 
         $settings13 = [
             'chart_title'           => 'Últimos chamados abertos',

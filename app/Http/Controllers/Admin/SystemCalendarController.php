@@ -14,7 +14,7 @@ class SystemCalendarController extends Controller
             'field'      => 'titulo',
             'prefix'     => '',
             'suffix'     => '',
-            'route'      => 'admin.chamados.edit',
+            'route'      => 'admin.chamados.show',
         ],
     ];
 

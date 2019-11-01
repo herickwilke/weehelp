@@ -140,7 +140,7 @@
                             <tr>
                                 @foreach($settings13['fields'] as $field)
                                     <th>
-                                        {{ ucfirst($field) }}
+                                     {{ ucfirst($field) }}
                                     </th>
                                 @endforeach
                             </tr>
