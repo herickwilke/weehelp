@@ -23,11 +23,13 @@ Password:	password
 
 
 **Pendências**
+Requisitos
 
-***Principais***
-- Notifications
-- API
-- Comentários
+- ( ) Notifications
+- ( ) API
+- ( ) Comentários
+
+***Menores***
 
 1. Aba listar chamados finalizados
 
@@ -41,20 +43,12 @@ Password:	password
 
 6. Finalizar o esqueceu-se da senha no login
 
-7. Validação de caracteres especiais nos forms
-
 8. Implementar notificação de Sucesso, Falha, etc
 
 9. Melhorias visuais -> user friendly com manuais na view
 
-10. Configurar novos seed
-
 11. Criar um item "novo chamado" no menu lateral para facilitar
 
-12. Adicionar comentários nos chamados
-
-13. Implementar a API.
-
-14. Consertar permissões, funções, controle de usuário.
-
 15. Auto preenchimento de forms, vir por padrão.
+
+16. ***TESTAR***
