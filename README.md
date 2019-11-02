@@ -27,7 +27,7 @@ Requisitos
 
 - ( ) Notifications
 - ( ) API
-- ( ) Comentários
+- (X) Comentários
 
 ***Menores***
 

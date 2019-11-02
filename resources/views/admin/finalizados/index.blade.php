@@ -12,7 +12,7 @@
                 <div class="panel-body">
 
                     <p>
-                        Text coming soon...
+                        Em breve...
                     </p>
 
 
