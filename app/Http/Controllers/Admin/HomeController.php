@@ -4,10 +4,13 @@ namespace App\Http\Controllers\Admin;
 
 use LaravelDaily\LaravelCharts\Classes\LaravelChart;
 
+use App\Http\Controllers\Admin\SystemCalendarController;
+
 class HomeController
 {
     public function index()
     {
+
         $settings1 = [
             'chart_title'           => 'Chamados abertos',
             'chart_type'            => 'number_block',
@@ -216,7 +219,7 @@ class HomeController
             'filter_field'          => 'created_at',
             'group_by_field_format' => 'd-m-Y H:i:s',
             'column_class'          => 'col-md-3',
-            'entries_number'        => '5',
+            'entries_number'        => '5', 
         ];
 
         $settings5['total_number'] = 0;
@@ -229,6 +232,7 @@ class HomeController
                         '>=',
                         now()->subDays($settings5['filter_days'])->format('Y-m-d')
                     );
+                    
                 } else if (isset($settings5['filter_period'])) {
                     switch ($settings5['filter_period']) {
                         case 'week':
@@ -248,6 +252,7 @@ class HomeController
                 }
             })
                 ->{$settings5['aggregate_function'] ?? 'count'}($settings5['aggregate_field'] ?? '*');
+
         }
 
         $settings6 = [

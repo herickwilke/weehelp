@@ -8,9 +8,12 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use Spatie\MediaLibrary\HasMedia\HasMedia;
 use Spatie\MediaLibrary\HasMedia\HasMediaTrait;
 use Spatie\MediaLibrary\Models\Media;
+use Laravelista\Comments\Commentable;
 
 class Chamado extends Model implements HasMedia
 {
+    use Commentable;
+
     use SoftDeletes, HasMediaTrait;
 
     public $table = 'chamados';

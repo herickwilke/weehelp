@@ -96,6 +96,13 @@
                                 </tr>
                             </tbody>
                         </table>
+
+                        <hr>
+
+                        <h2>Comentários</h2> <br>
+
+                         @comments(['model' => $chamado])
+
                         <a style="margin-top:20px;" class="btn btn-default" href="{{ url()->previous() }}">
                             {{ trans('global.back_to_list') }}
                         </a>

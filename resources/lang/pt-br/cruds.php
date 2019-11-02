@@ -126,8 +126,8 @@ return [
         'title_singular' => 'Finalizado',
     ],
     'timeManagement'    => [
-        'title'          => 'Gestão de tempo',
-        'title_singular' => 'Gestão de tempo',
+        'title'          => 'Gestão de Tarefas',
+        'title_singular' => 'Gestão de Tarefas',
     ],
     'timeWorkType'      => [
         'title'          => 'Tipos de tarefa',

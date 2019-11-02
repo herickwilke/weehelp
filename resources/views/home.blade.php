@@ -132,6 +132,13 @@
                     <h3>{!! $chart12->options['chart_title'] !!}</h3>
                     {!! $chart12->renderHtml() !!}
                 </div>
+
+                <!-- ÚLTIMOS CHAMADOS ABERTOS -->
+
+                <!-- <div class="panel panel-default">
+                    <div class="panel-body">
+                    
+
                 {{-- Widget - latest entries --}}
                 <div class="{{ $settings13['column_class'] }}">
                     <h3>{{ $settings13['chart_title'] }}</h3>
@@ -162,6 +169,8 @@
                         </tbody>
                     </table>
                 </div>
+                </div>
+                </div> -->
             </div>
         </div>
     </div>

@@ -38,9 +38,9 @@
                                     <th>
                                         {{ trans('cruds.chamado.fields.prioridade') }}
                                     </th>
-                                    <th>
+                                    <!-- <th>
                                         {{ trans('cruds.prioridadeChamado.fields.descricao') }}
-                                    </th>
+                                    </th> -->
                                     <th>
                                         {{ trans('cruds.chamado.fields.prazo') }}
                                     </th>
@@ -56,9 +56,9 @@
                                     <th>
                                         {{ trans('cruds.chamado.fields.status') }}
                                     </th>
-                                    <th>
+                                    <!-- <th>
                                         {{ trans('cruds.statusChamado.fields.descricao') }}
-                                    </th>
+                                    </th> -->
                                     <th>
                                         &nbsp;
                                     </th>
@@ -82,9 +82,9 @@
                                         <td>
                                             {{ $chamado->prioridade->prioridade ?? '' }}
                                         </td>
-                                        <td>
+                                        <!-- <td>
                                             {{ $chamado->prioridade->descricao ?? '' }}
-                                        </td>
+                                        </td> -->
                                         <td>
                                             {{ $chamado->prazo ?? '' }}
                                         </td>
@@ -106,9 +106,9 @@
                                         <td>
                                             {{ $chamado->status->status ?? '' }}
                                         </td>
-                                        <td>
+                                        <!-- <td>
                                             {{ $chamado->status->descricao ?? '' }}
-                                        </td>
+                                        </td> -->
                                         <td>
                                             @can('chamado_show')
                                                 <a class="btn btn-xs btn-primary" href="{{ route('admin.chamados.show', $chamado->id) }}">
