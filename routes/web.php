@@ -28,7 +28,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::resource('setors', 'SetorController');
 
     // Finalizados
-Route::resource('finalizados', 'FinalizadosController'/*, ['except' => ['create', 'store', 'edit', 'update', 'show', 'destroy']]*/);
+    Route::resource('finalizados', 'FinalizadosController', ['except' => ['create', 'store', 'edit', 'update', 'show', 'destroy']]);
 
     // Tarefas (tipos de tarefas)
     Route::delete('time-work-types/destroy', 'TimeWorkTypeController@massDestroy')->name('time-work-types.massDestroy');
