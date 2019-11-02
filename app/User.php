@@ -10,9 +10,13 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Passport\HasApiTokens;
+use Laravelista\Comments\Commenter;
+
 
 class User extends Authenticatable
 {
+    use Notifiable, Commenter;
+
     use SoftDeletes, Notifiable, HasApiTokens;
 
     public $table = 'users';

@@ -12,11 +12,12 @@
         "doctrine/dbal": "^2.9",
         "fideloper/proxy": "^4.0",
         "laravel/framework": "^6.0",
+        "laravel/passport": "^7.4",
         "laravel/tinker": "^1.0",
-        "yajra/laravel-datatables-oracle": "^9.6",
         "laraveldaily/laravel-charts": "^0.1.10",
+        "laravelista/comments": "^3.1",
         "spatie/laravel-medialibrary": "^7.12",
-        "laravel/passport": "^7.4"
+        "yajra/laravel-datatables-oracle": "^9.6"
     },
     "require-dev": {
         "facade/ignition": "^1.4",
