@@ -29,6 +29,9 @@
                                         Título
                                     </th>
                                     <th>
+                                        Anexos
+                                    </th>
+                                    <th>
                                         Data de finalização
                                     </th>
                                     <th>
@@ -47,6 +50,15 @@
                                         </td>
                                         <td>
                                             {{ $onlySoftDeleted->titulo ?? '' }}
+                                        </td>
+                                        <td>
+                                            @if($onlySoftDeleted->anexo)
+                                                @foreach($onlySoftDeleted->anexo as $key => $media)
+                                                    <a href="{{ $media->getUrl() }}" target="_blank">
+                                                        {{ trans('global.view_file') }} <br>
+                                                    </a>
+                                                @endforeach
+                                            @endif
                                         </td>
                                         <td>
                                             {{ $onlySoftDeleted->deleted_at ?? '' }}
@@ -130,8 +142,8 @@
   $.extend(true, $.fn.dataTable.defaults, {
     order: [[ 1, 'desc' ]],
     pageLength: 100,
-    "language": { select: {rows: "%d linhas selecionadas"}},
-  });
+    "language": { select: {rows: "%d linhas selecionadas"},
+    }});
   $('.datatable-onlySoftDeleted:not(.ajaxTable)').DataTable({ buttons: dtButtons })
     $('a[data-toggle="tab"]').on('shown.bs.tab', function(e){
         $($.fn.dataTable.tables(true)).DataTable()

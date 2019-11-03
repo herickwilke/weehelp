@@ -97,7 +97,7 @@
             {{ csrf_field() }}
         </form>
     </div>
-    <!-- <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet" /> -->
+    <!-- <link href="{{ asset('css\bootstrap.min.css') }}" rel="stylesheet" /> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.js"></script> -->
