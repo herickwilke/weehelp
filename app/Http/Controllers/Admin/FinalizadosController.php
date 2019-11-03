@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Chamado;
 use App\Http\Controllers\Controller;
 use Gate;
 use Illuminate\Http\Request;
@@ -13,6 +14,14 @@ class FinalizadosController extends Controller
     {
         abort_if(Gate::denies('finalizado_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
-        return view('admin.finalizados.index');
+        $onlySoftDeleted = Chamado::onlyTrashed()->get();
+
+
+
+        // return $onlySoftDeleted;
+
+        return view('admin.finalizados.index', compact('onlySoftDeleted'));
+
+
     }
 }
