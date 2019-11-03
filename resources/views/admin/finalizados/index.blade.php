@@ -7,13 +7,11 @@
 
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    {{ trans('cruds.finalizado.title') }}
+                    <h3>Chamados Finalizados</h3>
                 </div>
                 <div class="panel-body">
 
                     <p>
-                        Em breve...
-
                         <!-- {{ $onlySoftDeleted[0]->titulo }} -->
 
 
@@ -25,13 +23,13 @@
 
                                     </th>
                                     <th>
-                                        {{ trans('cruds.Chamado.fields.id') }}
+                                        ID do chamado
                                     </th>
                                     <th>
-                                        {{ trans('cruds.Chamado.fields.titulo') }}
+                                        Título
                                     </th>
                                     <th>
-                                        {{ trans('cruds.Chamado.fields.descricao') }}
+                                        Data de finalização
                                     </th>
                                     <th>
                                         &nbsp;
@@ -48,21 +46,21 @@
                                             {{ $onlySoftDeleted->id ?? '' }}
                                         </td>
                                         <td>
-                                            {{ $onlySoftDeleted->status ?? '' }}
+                                            {{ $onlySoftDeleted->titulo ?? '' }}
                                         </td>
                                         <td>
-                                            {{ $onlySoftDeleted->descricao ?? '' }}
+                                            {{ $onlySoftDeleted->deleted_at ?? '' }}
                                         </td>
-                                        <!-- <td>
+                                        <td>
                                             @can('status_chamado_show')
-                                                <a class="btn btn-xs btn-primary" href="{{ route('admin.status-chamados.show', $onlySoftDeleted->id) }}">
-                                                    {{ trans('global.view') }}
+                                                <!-- <a class="btn btn-xs btn-primary" href="{{ route('admin.status-chamados.show', $onlySoftDeleted->id) }}"> -->
+                                                    <!-- {{ trans('global.view') }} -->
                                                 </a>
                                             @endcan
 
                                             @can('status_chamado_edit')
-                                                <a class="btn btn-xs btn-info" href="{{ route('admin.status-chamados.edit', $onlySoftDeleted->id) }}">
-                                                    {{ trans('global.edit') }}
+                                                <!-- <a class="btn btn-xs btn-info" href="{{ route('admin.status-chamados.edit', $onlySoftDeleted->id) }}"> -->
+                                                    <!-- {{ trans('global.edit') }} -->
                                                 </a>
                                             @endcan
 
@@ -70,11 +68,11 @@
                                                 <form action="{{ route('admin.status-chamados.destroy', $onlySoftDeleted->id) }}" method="POST" onsubmit="return confirm('{{ trans('global.areYouSure') }}');" style="display: inline-block;">
                                                     <input type="hidden" name="_method" value="DELETE">
                                                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                                                    <input type="submit" class="btn btn-xs btn-danger" value="{{ trans('global.delete') }}">
+                                                    <!-- <input type="submit" class="btn btn-xs btn-danger" value="{{ trans('global.delete') }}"> -->
                                                 </form>
                                             @endcan
 
-                                        </td> -->
+                                        </td>
 
                                     </tr>
                                 @endforeach
@@ -96,14 +94,14 @@
 @endsection
 @section('scripts')
 @parent
-<!-- <script>
+<script>
     $(function () {
   let dtButtons = $.extend(true, [], $.fn.dataTable.defaults.buttons)
-@can('status_chamado_delete')
+@can('chamado_delete_test')
   let deleteButtonTrans = '{{ trans('global.datatables.delete') }}'
   let deleteButton = {
     text: deleteButtonTrans,
-    url: "{{ route('admin.status-chamados.massDestroy') }}",
+    url: "{{ route('admin.chamados.massDestroy') }}",
     className: 'btn-danger',
     action: function (e, dt, node, config) {
       var ids = $.map(dt.rows({ selected: true }).nodes(), function (entry) {
@@ -141,5 +139,5 @@
     });
 })
 
-</script> -->
+</script>
 @endsection

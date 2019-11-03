@@ -25,12 +25,6 @@ class StatusSeeder extends Seeder
                 'status'     => 'Congelado',
                 'descricao'      => 'Solicitação foi pausada para em algum momento ser continuada.',
                ],
-
-               [
-                'id'             => '4',
-                'status'     => 'Finalizado',
-                'descricao'      => 'Este chamado já foi atendido.',
-               ],
         ];
 
         StatusChamado::insert($status);
