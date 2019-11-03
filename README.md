@@ -1,4 +1,14 @@
-# Instalação do projeto
+# WeeHelp - Sistema de Chamados
+
+![alt text](https://i.imgur.com/wkOEzlZ.png)
+
+## Requisitos para rodar
+Laravel 6.0 + <br>
+PHP 7.2 + <br>
+Composer <br>
+Banco de dados SQL
+
+## Instalação do projeto
 
 1. Clonar o projeto;
 
@@ -30,20 +40,76 @@ git clone https://repositorio.faers.com.br/herickwilke/vendor
 ```
 php artisan serve
 ```
+
+O mesmo estará rodando no seu http://localhost:8000.
+
 ## Fazer login: 
-- Usuário: admin@admin.com
-- Senha: password 
+Usuário: admin@admin.com <br>
+Senha: password 
 
 <br>
 
+
+## API REST
+
+<p> Foram criadas rotas e controladores capazes de efetuar ações para qualquer CRUD do sistema, utilizando o Laravel Resources.
+É necessário instalar o Laravel Passport, que providenciará um token para cada usuário poder se autenticar e trocar informações. <br><br>
+Vamos instalar o Laravel Passport:
+
+```
+php artisan passport:install
+```
+
+<p>Ele retornará um código como este:
+
+```
+Encryption keys generated successfully.
+Personal access client created successfully.
+Client ID: 1
+Client secret: KAY4k312yebafievTzWNQWuY4nUEDfvAqFRSQo0b
+Password grant client created successfully.
+Client ID: 2
+Client secret: 1OSbOGyJsXgA1QlbCzL3cPv7LhJAUZuTcIRSbKmm
+``` 
+<p>(O código acima é um exemplo. Cada nova instalação e perfil recebe um hash aleatório)<br>
+<p>No banco de dados, foi criada uma tabela chamada "oauth_clients", onde ficam essas informações.<br>
+<p>Estas credenciais serão usadas para mandar uma requisição POST para o sistema de autenticação retornar o token que vamos utilizar para comunicar com a API.
+<br><br>
+
+1. Para pegar o token de acesso, execute sua ferramenta de requisição favorita (Postman, Insomnia.. etc);
+2. Configure-a para fazer exatamente a seguinte requisição POST, passando os parâmetros no BODY (multipart):
+
+```
+grant_type : password
+client_id : 2
+client_secret : (aqui você insere o client secret que gerou no passport logo acima)
+username : admin@admin.com
+password : password
+scope : *
+```
+
+
+![alt text](https://i.imgur.com/jwO3U8b.png)
+
+<br>
+
+3. A resposta da API nos dá o "access_token". Copie o mesmo, vamos utilizá-lo agora para pegar os dados.
+4. Configure agora uma requisição GET, para o CRUD que desejar, por exemplo, http://localhost:8000/api/v1/chamados
+5. Configure no cabeçalho (HEAD) uma autenticação do tipo BEARER e cole seu acces_token. 
+
+<br>
+
+![alt text](https://i.imgur.com/WwAfJ95.png)
+
+Pronto! Sua API REST está funcionando.
+
 **Pendências**
-Requisitos
 
 - ( ) Notifications
-- ( ) API
+- (X) API
 - (X) Comentários
 
-***Menores***
+**Menores**
 
 1. Aba listar chamados finalizados
 
@@ -53,18 +119,16 @@ Requisitos
 
 4. Implementar novos widgets do dashboard no controller
 
-5. Implementar notifications
+5. Finalizar o esqueceu-se da senha no login
 
-6. Finalizar o esqueceu-se da senha no login
+6. Implementar notificação de Sucesso, Falha, etc
 
-8. Implementar notificação de Sucesso, Falha, etc
+7. Melhorias visuais -> user friendly com manuais na view
 
-9. Melhorias visuais -> user friendly com manuais na view
+8. Criar um item "novo chamado" no menu lateral para facilitar
 
-11. Criar um item "novo chamado" no menu lateral para facilitar
+9. Auto preenchimento de forms, vir por padrão.
 
-15. Auto preenchimento de forms, vir por padrão.
+10. Visualização de documentos
 
-16. Visualização de documentos
-
-16. ***TESTAR***
+11. **TESTAR**
