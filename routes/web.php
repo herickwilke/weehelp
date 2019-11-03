@@ -57,3 +57,5 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     //Calendário
     Route::get('system-calendar', 'SystemCalendarController@index')->name('systemCalendar');
 });
+
+
