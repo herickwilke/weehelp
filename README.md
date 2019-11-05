@@ -111,7 +111,7 @@ Pronto! Sua API REST está funcionando.
 
 **Menores**
 
-1. Aba listar chamados finalizados
+(X) 1. Aba listar chamados finalizados
 
 2. Comentar código
 

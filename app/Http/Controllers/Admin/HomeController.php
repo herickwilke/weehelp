@@ -216,7 +216,7 @@ class HomeController
             'group_by_field'        => 'prazo',
             'group_by_period'       => 'day',
             'aggregate_function'    => 'count',
-            'filter_field'          => 'created_at',
+            'filter_field'          => 'status_id',
             'group_by_field_format' => 'd-m-Y H:i:s',
             'column_class'          => 'col-md-3',
             'entries_number'        => '5', 
@@ -226,30 +226,11 @@ class HomeController
 
         if (class_exists($settings5['model'])) {
             $settings5['total_number'] = $settings5['model']::when(isset($settings5['filter_field']), function ($query) use ($settings5) {
-                if (isset($settings5['filter_days'])) {
-                    return $query->where(
-                        $settings5['filter_field'],
-                        '>=',
-                        now()->subDays($settings5['filter_days'])->format('Y-m-d')
-                    );
+                
+                    return $query->where('status_id', '=', '1');
+                  
+        
                     
-                } else if (isset($settings5['filter_period'])) {
-                    switch ($settings5['filter_period']) {
-                        case 'week':
-                            $start  = date('Y-m-d', strtotime('last Monday'));
-                            break;
-                        case 'month':
-                            $start = date('Y-m') . '-01';
-                            break;
-                        case 'year':
-                            $start  = date('Y') . '-01-01';
-                            break;
-                    }
-
-                    if (isset($start)) {
-                        return $query->where($settings5['filter_field'], '>=', $start);
-                    }
-                }
             })
                 ->{$settings5['aggregate_function'] ?? 'count'}($settings5['aggregate_field'] ?? '*');
 
