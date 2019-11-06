@@ -83,8 +83,14 @@
                                         {{ trans('cruds.chamado.fields.anexo') }}
                                     </th>
                                     <td>
-                                        {{ $chamado->anexo }}
-                                    </td>
+                                            @if($chamado->anexo)
+                                                @foreach($chamado->anexo as $key => $media)
+                                                    <a href="{{ $media->getUrl() }}" target="_blank">
+                                                        {{ trans('global.view_file') }} <br>
+                                                    </a>
+                                                @endforeach
+                                            @endif
+                                        </td>
                                 </tr>
                                 <tr>
                                     <th>
