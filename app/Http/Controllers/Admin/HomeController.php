@@ -309,7 +309,7 @@ class HomeController
         if (class_exists($settings8['model'])) {
             $settings8['total_number'] = $settings8['model']::when(isset($settings8['filter_field']), function ($query) use ($settings8) {
                 
-                    return $query->where('deleted_at', '!=', '2001-01-01');
+                    return $query->where('deleted_at', '>', '2001-01-01');
                   
         
                     
@@ -319,7 +319,7 @@ class HomeController
 
 
         $settings9 = [
-            'chart_title'           => 'Volume de chamados (30 dias)',
+            'chart_title'           => 'Chamados no mês',
             'chart_type'            => 'line',
             'report_type'           => 'group_by_date',
             'model'                 => 'App\\Chamado',
@@ -336,7 +336,7 @@ class HomeController
         $chart9 = new LaravelChart($settings9);
 
         $settings10 = [
-            'chart_title'           => 'Chamados por dia (7 dias)',
+            'chart_title'           => 'Chamados por dia',
             'chart_type'            => 'bar',
             'report_type'           => 'group_by_date',
             'model'                 => 'App\\Chamado',
@@ -353,7 +353,7 @@ class HomeController
         $chart10 = new LaravelChart($settings10);
 
         $settings11 = [
-            'chart_title'        => 'Volume de tarefas (30 dias)',
+            'chart_title'        => 'Tarefas no mês',
             'chart_type'         => 'line',
             'report_type'        => 'group_by_relationship',
             'model'              => 'App\\TimeEntry',
@@ -369,7 +369,7 @@ class HomeController
         $chart11 = new LaravelChart($settings11);
 
         $settings12 = [
-            'chart_title'        => 'Tarefas na semana (7 dias)',
+            'chart_title'        => 'Tarefas na semana',
             'chart_type'         => 'bar',
             'report_type'        => 'group_by_relationship',
             'model'              => 'App\\TimeEntry',
