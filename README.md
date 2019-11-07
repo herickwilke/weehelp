@@ -131,4 +131,6 @@ Pronto! Sua API REST está funcionando.
 
 10. Visualização de documentos
 
+11. Configurar Lifetime
+
 11. **TESTAR**
