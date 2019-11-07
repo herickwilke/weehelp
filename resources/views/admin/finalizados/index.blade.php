@@ -7,13 +7,9 @@
 
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <h4 style="color: red;">Chamados Finalizados</h4>
+                    <h4>Chamados Finalizados</h4>
                 </div>
                 <div class="panel-body">
-
-                    <p>
-                        <!-- {{ $onlySoftDeleted[0]->titulo }} -->
-
 
                         <div class="table-responsive">
                         <table class=" table table-bordered table-striped table-hover datatable datatable-onlySoftDeleted">
@@ -91,11 +87,6 @@
                             </tbody>
                         </table>
                     </div>
-
-
-
-                    </p>
-
 
                 </div>
             </div>

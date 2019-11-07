@@ -16,8 +16,6 @@ class FinalizadosController extends Controller
 
         $onlySoftDeleted = Chamado::onlyTrashed()->get();
 
-
-
         // return $onlySoftDeleted;
 
         return view('admin.finalizados.index', compact('onlySoftDeleted'));
