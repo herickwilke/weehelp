@@ -53,15 +53,15 @@ Senha: password
 
 ## API REST
 
-<p> Foram criadas rotas e controladores capazes de efetuar ações para qualquer CRUD do sistema, utilizando o Laravel Resources.
+Foram criadas rotas e controladores capazes de efetuar ações para qualquer CRUD do sistema, utilizando o Laravel Resources.
 É necessário instalar o Laravel Passport, que providenciará um token para cada usuário poder se autenticar e trocar informações. <br><br>
-Vamos instalar o Laravel Passport: </p><br>
+Vamos instalar o Laravel Passport: <br>
 
 ```
 php artisan passport:install
 ```
 
-<p>Ele retornará um código como este:</p>
+Ele retornará um código como este: 
 
 ```
 Encryption keys generated successfully.
@@ -73,9 +73,9 @@ Client ID: 2
 Client secret: 1OSbOGyJsXgA1QlbCzL3cPv7LhJAUZuTcIRSbKmm
 ``` 
 
-<p>(O código acima é um exemplo. Cada nova instalação e perfil recebe um hash aleatório)</p><br>
-<p>No banco de dados, foi criada uma tabela chamada "oauth_clients", onde ficam essas informações.</p><br>
-<p>Estas credenciais serão usadas para mandar uma requisição POST para o sistema de autenticação retornar o token que vamos utilizar para comunicar com a API.</p>
+ (O código acima é um exemplo. Cada nova instalação e perfil recebe um hash aleatório) <br>
+ No banco de dados, foi criada uma tabela chamada "oauth_clients", onde ficam essas informações. <br>
+ Estas credenciais serão usadas para mandar uma requisição POST para o sistema de autenticação retornar o token que vamos utilizar para comunicar com a API. 
 <br><br>
 
 1. Para pegar o token de acesso, execute sua ferramenta de requisição favorita (Postman, Insomnia.. etc);
@@ -107,7 +107,7 @@ Pronto! Sua API REST está funcionando.
 
 ## Notifications e E-mail
 
-<p> Para dispararmos notifications e enviar e-mails de redefinição de senhas, é necessário configurar no arquivo .env o servidor SMTP de envio de mensagens. Enquanto em desenvolvimento, o servidor utilizado está sendo o de testes "mailtrap.io". Para configurá-lo: </p>
+  Para dispararmos notifications e enviar e-mails de redefinição de senhas, é necessário configurar no arquivo .env o servidor SMTP de envio de mensagens. Enquanto em desenvolvimento, o servidor utilizado está sendo o de testes "mailtrap.io". Para configurá-lo:  
 
 ```
 MAIL_DRIVER=smtp
@@ -118,7 +118,7 @@ MAIL_PASSWORD=85f4871f08c256
 MAIL_ENCRYPTION=
 ```
 
-<p> Os campos MAIL_USERNAME e MAIL_PASSWORD devem ser configurados de acordo com a sua própria conta no servidor de e-mails, que pode ser criada acessando: https://mailtrap.io. </p>
+  Os campos MAIL_USERNAME e MAIL_PASSWORD devem ser configurados de acordo com a sua própria conta no servidor de e-mails, que pode ser criada acessando: https://mailtrap.io.  
 
 **Pendências**
 
