@@ -105,7 +105,7 @@ Pronto! Sua API REST está funcionando.
 
 **Pendências**
 
-- ( ) Notifications
+- (X) Notifications
 - (X) API
 - (X) Comentários
 
