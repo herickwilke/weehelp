@@ -71,6 +71,7 @@ Password grant client created successfully.
 Client ID: 2
 Client secret: 1OSbOGyJsXgA1QlbCzL3cPv7LhJAUZuTcIRSbKmm
 ``` 
+
 <p>(O código acima é um exemplo. Cada nova instalação e perfil recebe um hash aleatório)<br>
 <p>No banco de dados, foi criada uma tabela chamada "oauth_clients", onde ficam essas informações.<br>
 <p>Estas credenciais serão usadas para mandar uma requisição POST para o sistema de autenticação retornar o token que vamos utilizar para comunicar com a API.
