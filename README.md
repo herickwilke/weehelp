@@ -54,13 +54,13 @@ Senha: password
 
 <p> Foram criadas rotas e controladores capazes de efetuar ações para qualquer CRUD do sistema, utilizando o Laravel Resources.
 É necessário instalar o Laravel Passport, que providenciará um token para cada usuário poder se autenticar e trocar informações. <br><br>
-Vamos instalar o Laravel Passport:
+Vamos instalar o Laravel Passport: </p><br>
 
 ```
 php artisan passport:install
 ```
 
-<p>Ele retornará um código como este:
+<p>Ele retornará um código como este:</p>
 
 ```
 Encryption keys generated successfully.
@@ -72,9 +72,9 @@ Client ID: 2
 Client secret: 1OSbOGyJsXgA1QlbCzL3cPv7LhJAUZuTcIRSbKmm
 ``` 
 
-<p>(O código acima é um exemplo. Cada nova instalação e perfil recebe um hash aleatório)<br>
-<p>No banco de dados, foi criada uma tabela chamada "oauth_clients", onde ficam essas informações.<br>
-<p>Estas credenciais serão usadas para mandar uma requisição POST para o sistema de autenticação retornar o token que vamos utilizar para comunicar com a API.
+<p>(O código acima é um exemplo. Cada nova instalação e perfil recebe um hash aleatório)</p><br>
+<p>No banco de dados, foi criada uma tabela chamada "oauth_clients", onde ficam essas informações.</p><br>
+<p>Estas credenciais serão usadas para mandar uma requisição POST para o sistema de autenticação retornar o token que vamos utilizar para comunicar com a API.</p>
 <br><br>
 
 1. Para pegar o token de acesso, execute sua ferramenta de requisição favorita (Postman, Insomnia.. etc);
@@ -88,7 +88,7 @@ username : admin@admin.com
 password : password
 scope : *
 ```
-
+<br>
 
 ![alt text](https://i.imgur.com/jwO3U8b.png)
 
