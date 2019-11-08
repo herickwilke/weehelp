@@ -126,7 +126,7 @@
                                                 <form action="{{ route('admin.chamados.destroy', $chamado->id) }}" method="POST" onsubmit="return confirm('{{ trans('global.areYouSure') }}');" style="display: inline-block;">
                                                     <input type="hidden" name="_method" value="DELETE">
                                                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                                                    <input type="submit" class="btn btn-xs btn-danger" value="{{ trans('global.delete') }}">
+                                                    <input type="submit" class="btn btn-xs btn-danger" value="Finalizar">
                                                 </form>
                                             @endcan
 
@@ -152,7 +152,7 @@
     $(function () {
   let dtButtons = $.extend(true, [], $.fn.dataTable.defaults.buttons)
 @can('chamado_delete')
-  let deleteButtonTrans = '{{ trans('global.datatables.delete') }}'
+  let deleteButtonTrans = 'Finalizar selecionados'
   let deleteButton = {
     text: deleteButtonTrans,
     url: "{{ route('admin.chamados.massDestroy') }}",
