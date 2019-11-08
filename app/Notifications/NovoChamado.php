@@ -47,8 +47,8 @@ class NovoChamado extends Notification
         return (new MailMessage)
                     ->subject("Novo chamado: {$this->chamado->titulo}")
                     ->line("Novo chamado aberto. Descrição: {$this->chamado->descricao}")
-                    ->action("Ir para o chamado", url('/'))
-                    ->line('Notificações para e-mail estão funcionando!');
+                    ->action("Ver o chamado", route('admin.chamados.show', $this->chamado->id))
+                    ->line('Foi aberto um novo chamado. E isso é uma ótima notícia! Notificações para e-mail estão funcionando!');
     }
 
     /**

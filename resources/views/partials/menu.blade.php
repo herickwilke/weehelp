@@ -98,7 +98,7 @@
                         @can('setor_access')
                             <li class="{{ request()->is('admin/setors') || request()->is('admin/setors/*') ? 'active' : '' }}">
                                 <a href="{{ route("admin.setors.index") }}">
-                                    <i class="fa-fw fas fa-door-closed">
+                                    <i class="fa-fw fas fa-archway">
 
                                     </i>
                                     <span>{{ trans('cruds.setor.title') }}</span>
