@@ -8,6 +8,7 @@ use App\Http\Controllers\Traits\MediaUploadingTrait;
 use App\Http\Requests\MassDestroyChamadoRequest;
 use App\Http\Requests\StoreChamadoRequest;
 use App\Http\Requests\UpdateChamadoRequest;
+use App\Notifications\NovoChamado;
 use App\PrioridadeChamado;
 use App\Setor;
 use App\StatusChamado;
@@ -15,6 +16,7 @@ use App\TimeProject;
 use App\User;
 use Gate;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Symfony\Component\HttpFoundation\Response;
 
 class ChamadoController extends Controller
@@ -54,6 +56,9 @@ class ChamadoController extends Controller
         foreach ($request->input('anexo', []) as $file) {
             $chamado->addMedia(storage_path('tmp/uploads/' . $file))->toMediaCollection('anexo');
         }
+
+        $author = Auth::user('id');
+        $author->notify(new NovoChamado($chamado));
 
         return redirect()->route('admin.chamados.index');
     }

@@ -5,7 +5,7 @@
         <div style="margin-bottom: 10px;" class="row">
             <div class="col-lg-12">
                 <a class="btn btn-success" href="{{ route("admin.chamados.create") }}">
-                    {{ trans('global.add') }} {{ trans('cruds.chamado.title_singular') }}
+                    Novo chamado
                 </a>
             </div>
         </div>
@@ -15,7 +15,7 @@
 
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    {{ trans('cruds.chamado.title_singular') }} {{ trans('global.list') }}
+                    Lista de chamados
                 </div>
                 <div class="panel-body">
 

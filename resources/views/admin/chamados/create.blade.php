@@ -7,7 +7,7 @@
 
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    {{ trans('global.create') }} {{ trans('cruds.chamado.title_singular') }}
+                    Criar Chamado
                 </div>
                 <div class="panel-body">
 
