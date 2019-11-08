@@ -30,7 +30,7 @@
                                         {{ trans('cruds.timeEntry.fields.id') }}
                                     </th>
                                     <th>
-                                        {{ trans('cruds.timeEntry.fields.work_type') }}
+                                        Tarefa
                                     </th>
                                     <th>
                                         {{ trans('cruds.timeEntry.fields.project') }}
