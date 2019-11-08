@@ -103,6 +103,21 @@ scope : *
 
 Pronto! Sua API REST está funcionando.
 
+## Notifications e E-mail
+
+<p> Para dispararmos notifications e enviar e-mails de redefinição de senhas, é necessário configurar no arquivo .env o servidor SMTP de envio de mensagens. Enquanto em desenvolvimento, o servidor utilizado está sendo o de testes "mailtrap.io". Para configurá-lo: </p>
+
+```
+MAIL_DRIVER=smtp
+MAIL_HOST=smtp.mailtrap.io
+MAIL_PORT=2525
+MAIL_USERNAME=a9139062930e35
+MAIL_PASSWORD=85f4871f08c256
+MAIL_ENCRYPTION=
+```
+
+<p> Os campos MAIL_USERNAME e MAIL_PASSWORD devem ser configurados de acordo com a sua própria conta no servidor de e-mails, que pode ser criada acessando: https://mailtrap.io. <p>
+
 **Pendências**
 
 - (X) Notifications
@@ -119,7 +134,7 @@ Pronto! Sua API REST está funcionando.
 
 4. Implementar novos widgets do dashboard no controller
 
-5. Finalizar o esqueceu-se da senha no login
+(X) 5. Finalizar o esqueceu-se da senha no login
 
 6. Implementar notificação de Sucesso, Falha, etc
 
