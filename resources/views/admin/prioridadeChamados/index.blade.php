@@ -5,7 +5,7 @@
         <div style="margin-bottom: 10px;" class="row">
             <div class="col-lg-12">
                 <a class="btn btn-success" href="{{ route("admin.prioridade-chamados.create") }}">
-                    {{ trans('global.add') }} {{ trans('cruds.prioridadeChamado.title_singular') }}
+                    Cadastrar Nova Prioridade
                 </a>
             </div>
         </div>

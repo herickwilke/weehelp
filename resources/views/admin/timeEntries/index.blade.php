@@ -5,7 +5,7 @@
         <div style="margin-bottom: 10px;" class="row">
             <div class="col-lg-12">
                 <a class="btn btn-success" href="{{ route("admin.time-entries.create") }}">
-                    {{ trans('global.add') }} {{ trans('cruds.timeEntry.title_singular') }}
+                    Nova Tarefa
                 </a>
             </div>
         </div>
