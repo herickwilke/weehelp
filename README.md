@@ -116,7 +116,7 @@ MAIL_PASSWORD=85f4871f08c256
 MAIL_ENCRYPTION=
 ```
 
-<p> Os campos MAIL_USERNAME e MAIL_PASSWORD devem ser configurados de acordo com a sua própria conta no servidor de e-mails, que pode ser criada acessando: https://mailtrap.io. <p>
+<p> Os campos MAIL_USERNAME e MAIL_PASSWORD devem ser configurados de acordo com a sua própria conta no servidor de e-mails, que pode ser criada acessando: https://mailtrap.io. </p>
 
 **Pendências**
 
