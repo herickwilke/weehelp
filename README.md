@@ -25,6 +25,7 @@ php artisan storage:link
 ```
 
 4. Após este procedimento, ir para "Área de trabalho" ou outro destino que não seja a raiz do projeto e clonar o repositório:
+
 ```
 git clone https://repositorio.faers.com.br/herickwilke/vendor
 ```
