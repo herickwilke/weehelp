@@ -50,6 +50,13 @@
                                 {{ trans('cruds.parametro.fields.descricao_helper') }}
                             </p>
                         </div>
+
+                        <div class="form-group {{ $errors->has('descricao') ? 'has-error' : '' }}" >
+                                <label for="descricao">Chave de acesso API:</label>
+                                <input type="text" id="descricao" name="descricao" class="form-control" value="{{ old('secret', isset($token) ? $token : '') }}" disabled>
+                                
+                            </div>
+
                         <div class="form-group {{ $errors->has('notif_email') ? 'has-error' : '' }}">
                             <label for="notif_email">Receber notificações por e-mail?   </label>
                             <input name="notif_email" type="hidden" value="0">
@@ -63,12 +70,6 @@
                                 {{ trans('cruds.parametro.fields.notif_email_helper') }}
                             </p> --}}
                         </div>
-
-                        <div class="form-group {{ $errors->has('descricao') ? 'has-error' : '' }}" >
-                                <label for="descricao">Chave de acesso API:</label>
-                                <input type="text" id="descricao" name="descricao" class="form-control" value="{{ old('secret', isset($token) ? $token : '') }}" disabled>
-                                
-                            </div>
 
                         <div>
                             <input class="btn btn-success" type="submit" value="{{ trans('global.save') }}">
