@@ -1,7 +1,14 @@
 <?php
 
+Route::get('markAsRead', function(){
+    auth()->user()->unreadNotifications->markAsRead();
+
+    return redirect()->back();
+})->name('markRead');
+
 Route::redirect('/', '/login');
 Route::redirect('/home', '/admin');
+
 Auth::routes(['register' => false]);
 
 Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'middleware' => ['auth']], function () {
@@ -60,6 +67,10 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
 
     //Calendário
     Route::get('system-calendar', 'SystemCalendarController@index')->name('systemCalendar');
+
+    //Notificações
+    Route::get('/notifications', 'NotificationsController@index')->name('notifications');
+
 });
 
 

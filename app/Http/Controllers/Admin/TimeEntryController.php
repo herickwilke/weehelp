@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\MassDestroyTimeEntryRequest;
 use App\Http\Requests\StoreTimeEntryRequest;
 use App\Http\Requests\UpdateTimeEntryRequest;
+use App\Notifications\NovaTarefa;
 use App\StatusChamado;
 use App\TimeEntry;
 use App\TimeProject;
@@ -24,6 +25,9 @@ class TimeEntryController extends Controller
 
         $timeEntries = TimeEntry::all();
 
+        $user = user::find(1);
+        $user->notify(new NovaTarefa);
+        
         return view('admin.timeEntries.index', compact('timeEntries'));
     }
 
