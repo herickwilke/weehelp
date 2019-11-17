@@ -34,4 +34,7 @@ Route::group(['prefix' => 'v1', 'as' => 'api.', 'namespace' => 'Api\V1\Admin', '
 
     // Prioridade Chamados
     Route::apiResource('prioridade-chamados', 'PrioridadeChamadoApiController');
+
+    // Parametros
+    Route::apiResource('parametros', 'ParametrosApiController');
 });

@@ -148,6 +148,17 @@
                         <span class="pull-right-container"><i class="fa fa-fw fa-angle-left pull-right"></i></span>
                     </a>
                     <ul class="treeview-menu">
+                            
+                        @can('administrador_access')
+                            <li class="{{ request()->is('admin/parametros') || request()->is('admin/parametros/*') ? 'active' : '' }}">
+                                <a href="{{ route("admin.parametros.index") }}">
+                                    <i class="fa-fw fas fa-cog">
+
+                                    </i>
+                                    <span>Parâmetros</span>
+                                </a>
+                            </li>
+                        @endcan
                         @can('status_chamado_access')
                             <li class="{{ request()->is('admin/status-chamados') || request()->is('admin/status-chamados/*') ? 'active' : '' }}">
                                 <a href="{{ route("admin.status-chamados.index") }}">

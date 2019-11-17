@@ -248,6 +248,26 @@ class PermissionsTableSeeder extends Seeder
                 'id'    => '60',
                 'title' => 'prioridade_chamado_access',
             ],
+            [
+                'id'    => '61',
+                'title' => 'parametro_create',
+            ],
+            [
+                'id'    => '62',
+                'title' => 'parametro_edit',
+            ],
+            [
+                'id'    => '63',
+                'title' => 'parametro_show',
+            ],
+            [
+                'id'    => '64',
+                'title' => 'parametro_delete',
+            ],
+            [
+                'id'    => '65',
+                'title' => 'parametro_access',
+            ],
         ];
 
         Permission::insert($permissions);

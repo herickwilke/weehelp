@@ -53,6 +53,10 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     // Prioridade Chamados
     Route::delete('prioridade-chamados/destroy', 'PrioridadeChamadoController@massDestroy')->name('prioridade-chamados.massDestroy');
     Route::resource('prioridade-chamados', 'PrioridadeChamadoController');
+    
+    // Parametros
+    Route::delete('parametros/destroy', 'ParametrosController@massDestroy')->name('parametros.massDestroy');
+    Route::resource('parametros', 'ParametrosController');
 
     //Calendário
     Route::get('system-calendar', 'SystemCalendarController@index')->name('systemCalendar');
