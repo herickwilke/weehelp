@@ -25,8 +25,8 @@ class UpdateParametroRequest extends FormRequest
             'valor'     => [
                 'nullable',
                 'integer',
-                'min:-2147483648',
-                'max:2147483647',
+                'min:5',
+                'max:999',
             ],
         ];
     }

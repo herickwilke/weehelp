@@ -17,6 +17,8 @@ class CreateParametrosTable extends Migration
 
             $table->string('descricao')->nullable();
 
+            $table->boolean('notif_email')->default(0)->nullable();
+
             $table->timestamps();
 
             $table->softDeletes();

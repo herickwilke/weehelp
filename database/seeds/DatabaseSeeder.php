@@ -17,6 +17,7 @@ class DatabaseSeeder extends Seeder
             TipoTarefaSeeder::class,
             SetorSeeder::class,
             ProjetoSeeder::class,
+            ParametroSeeder::class,
         ]);
     }
 }

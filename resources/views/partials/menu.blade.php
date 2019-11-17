@@ -151,7 +151,7 @@
                             
                         @can('administrador_access')
                             <li class="{{ request()->is('admin/parametros') || request()->is('admin/parametros/*') ? 'active' : '' }}">
-                                <a href="{{ route("admin.parametros.index") }}">
+                                <a href="{{ route("admin.parametros.edit", 1) }}">
                                     <i class="fa-fw fas fa-cog">
 
                                     </i>
