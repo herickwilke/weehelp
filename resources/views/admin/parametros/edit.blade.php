@@ -65,7 +65,7 @@
                         </div>
 
                         <div class="form-group {{ $errors->has('descricao') ? 'has-error' : '' }}" >
-                                <label for="descricao">Token de acesso API:</label>
+                                <label for="descricao">Chave de acesso API:</label>
                                 <input type="text" id="descricao" name="descricao" class="form-control" value="{{ old('secret', isset($token) ? $token : '') }}" disabled>
                                 
                             </div>
