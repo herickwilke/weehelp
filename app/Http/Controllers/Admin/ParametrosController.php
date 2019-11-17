@@ -8,6 +8,7 @@ use App\Http\Requests\StoreParametroRequest;
 use App\Http\Requests\UpdateParametroRequest;
 use App\Parametro;
 use Gate;
+use App\Token;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -40,7 +41,9 @@ class ParametrosController extends Controller
     {
         abort_if(Gate::denies('parametro_edit'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
-        return view('admin.parametros.edit', compact('parametro'));
+        $token = Token::where('id', '=', '1')->value('secret');
+
+        return view('admin.parametros.edit', compact('parametro', 'token'));
     }
 
     public function update(UpdateParametroRequest $request, Parametro $parametro)

@@ -7,7 +7,7 @@
 
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    Defina Parâmetros do Sistema
+                    Definir Parâmetros do Sistema
                 </div>
                 <div class="panel-body">
 
@@ -63,6 +63,13 @@
                                 {{ trans('cruds.parametro.fields.notif_email_helper') }}
                             </p> --}}
                         </div>
+
+                        <div class="form-group {{ $errors->has('descricao') ? 'has-error' : '' }}" >
+                                <label for="descricao">Token de acesso API:</label>
+                                <input type="text" id="descricao" name="descricao" class="form-control" value="{{ old('secret', isset($token) ? $token : '') }}" disabled>
+                                
+                            </div>
+
                         <div>
                             <input class="btn btn-success" type="submit" value="{{ trans('global.save') }}">
                         </div>
