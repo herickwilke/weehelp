@@ -47,7 +47,7 @@ class ParametrosController extends Controller
     {
         $parametro->update($request->all());
 
-        return redirect()->route('admin.parametros.index');
+        return redirect()->route('admin.parametros.edit', 1);
     }
 
     public function show(Parametro $parametro)

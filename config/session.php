@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Str;
+use App\Parametro;
 
 return [
 
@@ -31,7 +32,9 @@ return [
     |
     */
 
-    'lifetime' => env('SESSION_LIFETIME', 120),
+    $expira = Parametro::all()->get('valor')->where('id', '=', '1'),
+
+    'lifetime' => env('SESSION_LIFETIME', $expira),
 
     'expire_on_close' => false,
 

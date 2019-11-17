@@ -14,6 +14,7 @@ use App\Setor;
 use App\StatusChamado;
 use App\TimeProject;
 use App\User;
+use App\Parametro;
 use Gate;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -57,8 +58,11 @@ class ChamadoController extends Controller
             $chamado->addMedia(storage_path('tmp/uploads/' . $file))->toMediaCollection('anexo');
         }
 
+        $email = Parametro::where('id', '=', '1')->value('notif_email');
+        if ($email == true){
         $author = Auth::user('id');
         $author->notify(new NovoChamado($chamado));
+        }
 
         return redirect()->route('admin.chamados.index');
     }
