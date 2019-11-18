@@ -26,7 +26,7 @@
                 @endif
             </div>
             <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                <input type="password" name="password" class="form-control" required placeholder="{{ trans('global.login_password') }}">
+                <input type="password" name="password" class="form-control" required placeholder="Senha">
                 @if($errors->has('password'))
                     <p class="help-block">
                         {{ $errors->first('password') }}
