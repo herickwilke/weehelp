@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Chamado;
 use LaravelDaily\LaravelCharts\Classes\LaravelChart;
 
 use App\Http\Controllers\Admin\SystemCalendarController;
@@ -309,7 +310,7 @@ class HomeController
         if (class_exists($settings8['model'])) {
             $settings8['total_number'] = $settings8['model']::when(isset($settings8['filter_field']), function ($query) use ($settings8) {
                 
-                    return $query->where('deleted_at', '>', '2001-01-01');
+                    return $query = Chamado::onlyTrashed()->get();
                   
         
                     
