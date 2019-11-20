@@ -32,7 +32,7 @@
   <body class="sidebar-mini skin-blue" style="height: auto; min-height: 100%;">
     <div class="wrapper" style="height: auto; min-height: 100%;">
       <header class="main-header">
-        <a href="#" class="logo">
+        <a href="/admin" class="logo">
           <span class="logo-mini"><b>{{ trans('panel.site_title') }}</b></span>
           <span class="logo-lg">{{ trans('panel.site_title') }}</span>
         </a>
