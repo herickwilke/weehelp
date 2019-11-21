@@ -28,7 +28,9 @@
                         <!-- /.box-header -->
                         <div class="box-body">                            
                                 <div class="box-footer text-center" style="border-bottom: 1px solid #f4f4f4;">
+                                    @if(auth()->user()->unreadNotifications->count())
                                     <a href="{{route('markRead')}}" class="uppercase btn btn-warning" style="color:white">Marcar todas como lidas</a>
+                                    @endif 
                                 </div>
                             
                             {{-- INICIA A LISTA DE NOTIFICAÇÕES --}}
