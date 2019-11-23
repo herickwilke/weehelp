@@ -24,7 +24,12 @@
                                 <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
                             </div>
                         </div> --}}
+
+                        @if(auth()->user()->Notifications->count() == 0)
+                        <br>
+                        <h4>Você ainda não possui notificações.</h4>
                         
+                        @else
                         <!-- /.box-header -->
                         <div class="box-body">                            
                                 <div class="box-footer text-center" style="border-bottom: 1px solid #f4f4f4;">
@@ -131,8 +136,10 @@
                             </div>
                             <!-- /.box-body -->
                             <!-- /.box-footer -->
+                            @endif
                         </div>
                         
+
                         <div>
                         </div>
                         <nav aria-label="Page navigation example">
