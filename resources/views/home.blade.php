@@ -2,6 +2,17 @@
 @section('content')
 <div class="content">
     <div class="row">
+
+                    <div class="col-lg-12">
+                        
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <h3> Olá, {{ auth()->user()->name }}. </h3>
+                            </div>
+                        </div>
+                    </div>
+            </div>                    
+
         <div class="col-lg-12">
             <div class="row">
                 <div class="{{ $settings1['column_class'] }}">

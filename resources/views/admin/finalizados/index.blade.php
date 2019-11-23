@@ -7,7 +7,7 @@
 
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <h4>Chamados Finalizados</h4>
+                    <h4 style="font-weight:bold">Chamados Finalizados</h4>
                 </div>
                 <div class="panel-body">
 
