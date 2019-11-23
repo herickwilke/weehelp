@@ -25,7 +25,7 @@ class TimeEntryController extends Controller
 
         $timeEntries = TimeEntry::all();
 
-        $user = user::find(1);
+        $user = auth()->user();
         $user->notify(new NovaTarefa);
         
         return view('admin.timeEntries.index', compact('timeEntries'));

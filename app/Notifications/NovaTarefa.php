@@ -30,7 +30,7 @@ class NovaTarefa extends Notification
      */
     public function via($notifiable)
     {
-        return ['database'];
+        return ['database', 'mail'];
     }
 
     /**
@@ -42,9 +42,9 @@ class NovaTarefa extends Notification
     public function toMail($notifiable)
     {
         return (new MailMessage)
-                    ->line('The introduction to the notification.')
-                    ->action('Notification Action', url('/'))
-                    ->line('Thank you for using our application!');
+        ->subject("Nova tarefa")
+        ->line("Novo ch")
+        ->line('Foi aberto um novo chamado. E isso é uma ótima notícia! Notificações para e-mail estão funcionando!');
     }
 
     /**
