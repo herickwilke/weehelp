@@ -44,9 +44,10 @@ class NovoChamado extends Notification
     */
     public function toMail($notifiable)
     {
+        $criador = auth()->user('name');
         return (new MailMessage)
         ->subject("Novo chamado: {$this->chamado->titulo}")
-        ->line("Novo chamado aberto. Descrição: {$this->chamado->descricao}")
+        ->line("Um novo chamado aberto para você pelo usuário {$criador->name}.")
         ->action("Ver o chamado", route('admin.chamados.show', $this->chamado->id))
         ->line('Foi aberto um novo chamado. E isso é uma ótima notícia! Notificações para e-mail estão funcionando!');
     }

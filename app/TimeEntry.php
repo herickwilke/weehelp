@@ -5,9 +5,12 @@ namespace App;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Laravelista\Comments\Commentable;
 
 class TimeEntry extends Model
 {
+    use Commentable;
+
     use SoftDeletes;
 
     public $table = 'time_entries';

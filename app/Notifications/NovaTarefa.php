@@ -7,6 +7,7 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
+use App\TimeWorkType;
 
 class NovaTarefa extends Notification
 {
@@ -43,10 +44,12 @@ class NovaTarefa extends Notification
      */
     public function toMail($notifiable)
     {
+        $criador = auth()->user('name');
         return (new MailMessage)
-        ->subject("Nova tarefa")
-        ->line("Novo ch")
-        ->line('Foi aberto um novo chamado. E isso é uma ótima notícia! Notificações para e-mail estão funcionando!');
+        ->subject("Uma nova tarefa para você: {$this->tarefa->work_type->name}")
+        ->line("Uma nova tarefa foi criada para você pelo usuário {$criador->name}.")
+        ->action("Ver a tarefa", route('admin.time-entries.show', $this->tarefa->id))
+        ->line('Foi criada uma nova tarefa no sistema de chamados WeeHelp para você. Para visualizar, clique no botão ver a tarefa acima.');
     }
 
     /**
