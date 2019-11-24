@@ -26,8 +26,6 @@ Route::group(['prefix' => 'v1', 'as' => 'api.', 'namespace' => 'Api\V1\Admin', '
     // Time Entries
     Route::apiResource('time-entries', 'TimeEntryApiController');
 
-    // Time Reports
-    Route::apiResource('time-reports', 'TimeReportApiController');
 
     // Status Chamados
     Route::apiResource('status-chamados', 'StatusChamadoApiController');

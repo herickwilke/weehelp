@@ -105,6 +105,12 @@ scope : *
 
 Pronto! Sua API REST está funcionando.
 
+Para verificar todos os caminhos possíveis para troca de informação com a API REST, utilize o comando:
+
+```
+php artisan route:list
+```
+
 ## Notifications e E-mail
 
   Para dispararmos notifications e enviar e-mails de redefinição de senhas, é necessário configurar no arquivo .env o servidor SMTP de envio de mensagens. Enquanto em desenvolvimento, o servidor utilizado está sendo o de testes "mailtrap.io". Para configurá-lo:  
@@ -120,13 +126,8 @@ MAIL_ENCRYPTION=
 
   Os campos MAIL_USERNAME e MAIL_PASSWORD devem ser configurados de acordo com a sua própria conta no servidor de e-mails, que pode ser criada acessando: https://mailtrap.io.  
 
-**Pendências**
 
-- (X) Notifications
-- (X) API
-- (X) Comentários
-
-**Menores**
+**Checklist**
 
 (X) 1. Aba listar chamados finalizados
 
