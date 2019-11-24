@@ -33,7 +33,7 @@ class NovoChamado extends Notification
      */
     public function via($notifiable)
     {
-        return ['mail'];
+        return ['mail', 'database'];
     }
 
     /**
@@ -59,8 +59,9 @@ class NovoChamado extends Notification
      */
     public function toArray($notifiable)
     {
+        $teste = auth()->user()->name;
         return [
-            //
+            'data' => "{$teste} criou um novo chamado atribuído a você."
         ];
     }
 }

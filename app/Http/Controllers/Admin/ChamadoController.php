@@ -19,6 +19,7 @@ use Gate;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Symfony\Component\HttpFoundation\Response;
+use Illuminate\Support\Facades\Notification;
 
 class ChamadoController extends Controller
 {
@@ -60,10 +61,10 @@ class ChamadoController extends Controller
 
         $email = Parametro::where('id', '=', '1')->value('notif_email');
         if ($email == true){
-        $author = Auth::user('id');
-        $author->notify(new NovoChamado($chamado));
+        $user_responsavel = User::get('id')->where('id', '=', $chamado->responsavel_id);
+        Notification::send($user_responsavel, new NovoChamado($chamado));
         }
-
+        
         return redirect()->route('admin.chamados.index');
     }
 
