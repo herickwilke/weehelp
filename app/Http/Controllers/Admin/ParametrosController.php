@@ -41,7 +41,8 @@ class ParametrosController extends Controller
     {
         abort_if(Gate::denies('parametro_edit'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
-        $token = Token::where('id', '=', '1')->value('secret');
+        $usuario = auth()->user('id');
+        $token = Token::where('id', '=', $usuario->id)->value('secret');
 
         return view('admin.parametros.edit', compact('parametro', 'token'));
     }
