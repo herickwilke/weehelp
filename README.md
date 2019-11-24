@@ -133,9 +133,9 @@ MAIL_ENCRYPTION=
 
 2. Comentar código
 
-3. Corrigir bug de exibir as divs ao invés do conteúdo na listagem de "descrição"
+(X) 3. Corrigir bug de exibir as divs ao invés do conteúdo na listagem de "descrição"
 
-4. Implementar novos widgets do dashboard no controller
+(X) 4. Implementar novos widgets do dashboard no controller
 
 (X) 5. Finalizar o esqueceu-se da senha no login
 
@@ -144,10 +144,6 @@ MAIL_ENCRYPTION=
 7. Melhorias visuais -> user friendly com manuais na view
 
 8. Criar um item "novo chamado" no menu lateral para facilitar
-
-9. Auto preenchimento de forms, vir por padrão.
-
-10. Visualização de documentos
 
 11. Configurar Lifetime
 
