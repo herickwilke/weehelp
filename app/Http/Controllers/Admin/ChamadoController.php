@@ -61,7 +61,7 @@ class ChamadoController extends Controller
 
         $email = Parametro::where('id', '=', '1')->value('notif_email');
         if ($email == true){
-        $user_responsavel = User::get('id')->where('id', '=', $chamado->responsavel_id);
+        $user_responsavel = User::get()->where('id', '=', $chamado->responsavel_id);
         Notification::send($user_responsavel, new NovoChamado($chamado));
         }
         
