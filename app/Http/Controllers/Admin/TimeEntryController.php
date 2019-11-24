@@ -8,6 +8,7 @@ use App\Http\Requests\MassDestroyTimeEntryRequest;
 use App\Http\Requests\StoreTimeEntryRequest;
 use App\Http\Requests\UpdateTimeEntryRequest;
 use App\Notifications\NovaTarefa;
+use App\Parametro;
 use App\StatusChamado;
 use App\TimeEntry;
 use App\TimeProject;
@@ -16,6 +17,7 @@ use App\User;
 use Gate;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Illuminate\Support\Facades\Notification;
 
 class TimeEntryController extends Controller
 {
@@ -24,36 +26,41 @@ class TimeEntryController extends Controller
         abort_if(Gate::denies('time_entry_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
         $timeEntries = TimeEntry::all();
-
-        $user = auth()->user();
-        $user->notify(new NovaTarefa);
         
         return view('admin.timeEntries.index', compact('timeEntries'));
-    }
+    
+}
 
-    public function create()
-    {
-        abort_if(Gate::denies('time_entry_create'), Response::HTTP_FORBIDDEN, '403 Forbidden');
+public function create()
+{
+    abort_if(Gate::denies('time_entry_create'), Response::HTTP_FORBIDDEN, '403 Forbidden');
+    
+    $work_types = TimeWorkType::all()->pluck('name', 'id')->prepend(trans('global.pleaseSelect'), '');
+    
+    $projects = TimeProject::all()->pluck('name', 'id')->prepend(trans('global.pleaseSelect'), '');
+    
+    $chamados = Chamado::all()->pluck('titulo', 'id')->prepend(trans('global.pleaseSelect'), '');
+    
+    $statuses = StatusChamado::all()->pluck('status', 'id')->prepend(trans('global.pleaseSelect'), '');
+    
+    $usuarios = User::all()->pluck('name', 'id')->prepend(trans('global.pleaseSelect'), '');
+    
+    
+    return view('admin.timeEntries.create', compact('work_types', 'projects', 'chamados', 'statuses', 'usuarios'));
+}
 
-        $work_types = TimeWorkType::all()->pluck('name', 'id')->prepend(trans('global.pleaseSelect'), '');
-
-        $projects = TimeProject::all()->pluck('name', 'id')->prepend(trans('global.pleaseSelect'), '');
-
-        $chamados = Chamado::all()->pluck('titulo', 'id')->prepend(trans('global.pleaseSelect'), '');
-
-        $statuses = StatusChamado::all()->pluck('status', 'id')->prepend(trans('global.pleaseSelect'), '');
-
-        $usuarios = User::all()->pluck('name', 'id')->prepend(trans('global.pleaseSelect'), '');
-
-        return view('admin.timeEntries.create', compact('work_types', 'projects', 'chamados', 'statuses', 'usuarios'));
-    }
-
-    public function store(StoreTimeEntryRequest $request)
-    {
-        $timeEntry = TimeEntry::create($request->all());
+public function store(StoreTimeEntryRequest $request)
+{
+    $timeEntry = TimeEntry::create($request->all());
+    
+    // NOTIFICAÇÃO
+    $email = Parametro::where('id', '=', '1')->value('notif_email');
+    if ($email == true){
+    $user_responsavel = User::get()->where('id', '=', $timeEntry->usuario_id);
+    Notification::send($user_responsavel, new NovaTarefa($timeEntry));
 
         return redirect()->route('admin.time-entries.index');
-    }
+    }}
 
     public function edit(TimeEntry $timeEntry)
     {

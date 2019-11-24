@@ -2,6 +2,7 @@
 
 namespace App\Notifications;
 
+use App\TimeEntry;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
@@ -16,9 +17,10 @@ class NovaTarefa extends Notification
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(TimeEntry $timeEntry)
     {
         //
+        $this->tarefa = $timeEntry;
         
     }
 
@@ -55,8 +57,9 @@ class NovaTarefa extends Notification
      */
     public function toArray($notifiable)
     {
+        $teste = auth()->user()->name;
         return [
-            'data' => 'Usuário criou uma nova tarefa'
+            'data' => "{$teste} criou a tarefa nº {$this->tarefa->id} atribuída a você."
         ];
     }
 }

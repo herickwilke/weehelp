@@ -2,7 +2,7 @@
     <section class="sidebar" style="height: auto;">
         <ul class="sidebar-menu tree" data-widget="tree">
             
-            <li>
+            <li class="{{ request()->is('admin/notifications') ? 'active' : '' }}">
                 <a href="{{ route("admin.notifications") }}">
                     <i class="fas fa-bell"></i>
                     <span>Notificações</span>
@@ -14,7 +14,7 @@
                 </a>
             </li>
             
-            <li>
+            <li class="{{ request()->is('admin') ? 'active' : '' }}">
                 <a href="{{ route("admin.home") }}">
                     <i class="fas fa-fw fa-tachometer-alt">
                         

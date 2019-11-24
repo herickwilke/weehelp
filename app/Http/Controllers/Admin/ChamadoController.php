@@ -59,6 +59,7 @@ class ChamadoController extends Controller
             $chamado->addMedia(storage_path('tmp/uploads/' . $file))->toMediaCollection('anexo');
         }
 
+        // NOTIFICAÇÃO
         $email = Parametro::where('id', '=', '1')->value('notif_email');
         if ($email == true){
         $user_responsavel = User::get()->where('id', '=', $chamado->responsavel_id);
